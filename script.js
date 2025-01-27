@@ -18,7 +18,7 @@ function getStoredTasks() {
   const taskList = document.getElementById("task-list");
   const addButton = document.getElementById("add-task-btn");
   
-  function addTask() {
+  function addTask(taskText, save = true) {
     const taskText = taskInput.value.trim();
     
     if(taskText === ""){
