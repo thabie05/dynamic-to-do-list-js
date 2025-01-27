@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+  function loadTasks() {
+    const storedTasks = JSON.parse(localStorage.getItem('tasks') || '[]');
+    storedTasks.forEach(taskText => addTask(taskText, false)); // Avoid saving again while loading
+}
+
   const taskInput = document.getElementById("task-input");
   const taskList = document.getElementById("task-list");
   const addButton = document.getElementById("add-task-btn");
