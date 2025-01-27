@@ -10,11 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function addTask(taskText, save = true) {
-      if (taskText === '') {
-          alert('Please enter a task.');
-          return;
-      }
-
+    const taskText = taskInput.value.trim();
+    
+    if(taskText === ""){
+     alert('Please enter a task.')
+      return;
+    } 
       const li = document.createElement('li');
       li.textContent = taskText;
 
